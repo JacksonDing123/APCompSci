@@ -5,6 +5,7 @@ public class FishinHole{
     /**
      * @author Jackson Ding, Crescent School, ICS4U
      * Version 1.2 - No Methods, Wrong Output Solved by adding detection mechanism to see if 1 fish is caught
+     * Main Algorithms - Find the maxmimum number of fish that can be caught for each type, use nested forloops to loop through all 3 different types of fish to find combinations avaiable
      * Solves the CCC '06 J3 - Cell-Phone Messaging problem (https://dmoj.ca/problem/ccc06j3)
      */
     public static void main(String[] args){
@@ -37,6 +38,7 @@ public class FishinHole{
                         }else {
                             //print and track the number of available methods
                             System.out.println(i + " Brown Trout, " + j + " Northern Pike, " + k + " Yellow Pickerel");
+                            //System.out.println(i*fishtype[0]+j*fishtype[1]+k*fishtype[2]+"<="+totalAllow); --> for testing to see if the sum is actually smaller or equal to the total allowable points
                             numTrack++;
                         }
                     }
