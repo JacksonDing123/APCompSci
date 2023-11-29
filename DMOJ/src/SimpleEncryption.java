@@ -3,13 +3,13 @@ import java.util.Scanner;
 
 public class SimpleEncryption {
 
-    //source   1 https://javarevisited.blogspot.com/2016/02/how-to-remove-all-special-characters-of-String-in-java.html#:~:text=You%20can%20use%20a%20regular,all%20special%20characters%20from%20String.
+    //source 1 https://javarevisited.blogspot.com/2016/02/how-to-remove-all-special-characters-of-String-in-java.html#:~:text=You%20can%20use%20a%20regular,all%20special%20characters%20from%20String.
     //souce 2 https://www.quora.com/How-do-you-check-for-an-empty-string-and-null-character-in-the-C-programming-language#:~:text=Null%20Character%20Check%3A%20To%20check,c%20%3D%3D%20'%5C0')
 
     /**
      * @author Jackson Ding, Crescent School, ICS4U
      * Version 1.2 - No Methods, Wrong Output Solved by using correct math with the characters from the message
-     * Main Algorithms - Make a 2D char array based on the keyword and the message, then add the each character after being modified from the message to the array, the characters are modified by shifting the respective placement of each char depending on the keyword
+     * Main Algorithms - Make a 2D char array based on the keyword and the message, then add each character after being modified with the respective character in that colum from the message to the array, the characters are modified by shifting the respective placement of each char depending on the keyword
      * Solves the CCC '04 J4 - Simple Encryption (https://dmoj.ca/problem/ccc04j4)
      */
     public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class SimpleEncryption {
                     //finds the place value of the character from the message in the alphabet first, add it by the place value of the character from the respective keyword, then mod it by 26 for correct shifts in character, then change the value with respect to the ascii table
                     table[i][j] = Character.toUpperCase(temp); //change the character to upper case
                     //System.out.println(table[i][j]); //for testing purposes
-                    k++;
+                    k++;// to move to the next character
                 }else{
                     continue;
                 }
