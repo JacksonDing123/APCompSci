@@ -22,12 +22,21 @@ public class AbsolutelyAcidic {
         int maxFrequency = 0;//used to store the max frequency
         int secondMaxFrequency = 0;//used to store the seocndmaximum frequency if there is one
         int maxFrequencyIndex = 0;//used to store the index of the maxfrequency to avoid second counting the max frequency for the second max frequency
+        int secondMaxFrequencyIndex = 0;
+
+        //for test cases
+//        int[] test1 = {823, 412, 219, 532, 712, 412, 532, 712, 219, 823, 219, 847, 219, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712};
 
         //takes all of the inputs
         for(int i = 0; i<n; i++){
             int x = input.nextInt();
             inputarray[x]++;
         }
+
+// for test cases
+//        for(int i = 0; i< test1.length; i++){
+//            inputarray[test1[i]]++;
+//        }
 
         //finds the maximum frequency if the next value is bigger than the current one
         for(int i = 0; i<inputarray.length; i++){
@@ -41,8 +50,14 @@ public class AbsolutelyAcidic {
         for(int i = 0; i<inputarray.length;i++){
             if(inputarray[i]>secondMaxFrequency&&inputarray[i]<=maxFrequency&&i!=maxFrequencyIndex){
                 secondMaxFrequency = inputarray[i];
+                secondMaxFrequencyIndex = i;
             }
         }
+
+//        System.out.println(maxFrequency);
+//        System.out.println(secondMaxFrequency);
+//        System.out.println(maxFrequencyIndex);
+//        System.out.println(secondMaxFrequencyIndex);
 
         //finds the max value if there are two of the same maximum frequencies
         if(maxFrequency == secondMaxFrequency){
