@@ -8,7 +8,7 @@ public class AbsolutelyAcidic {
     /**
      * @author Jackson Ding, Crescent School, ICS4U, 2024 FEB 2
      * Version 1.7 - No Methods, fixed the issue to find the actual right secondMaximumFrequency
-     * Main Algorithms - make a array that contains all of the senor information where the index is the sensor value and the value of the index is the frequency, iterate twice to find the maximum and second maximum frequency and then depending on if the max and second max is the same frequency the program finds the max and min values to find the maxmimum difference
+     * Main Algorithms - make a array that contains all of the sensor information where the index is the sensor value and the value of the index is the frequency, iterate twice to find the maximum and second maximum frequency and then depending on if the max and second max is the same frequency the program finds the max and min values to find the maxmimum difference
      * Solves the CCC '12 S3 - Absolutely Acidic (https://dmoj.ca/problem/ccc12s3)
      */
     public static void main(String[] args){
