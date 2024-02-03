@@ -6,7 +6,7 @@ public class AbsolutelyAcidic {
     //source 1 Jeff Qiu on how to store all of the sensor information as 1 array
 
     /**
-     * @author Jackson Ding, Crescent School, ICS4U
+     * @author Jackson Ding, Crescent School, ICS4U, 2024 FEB 2
      * Version 1.7 - No Methods, fixed the issue to find the actual right secondMaximumFrequency
      * Main Algorithms - make a array that contains all of the senor information where the index is the sensor value and the value of the index is the frequency, iterate twice to find the maximum and second maximum frequency and then depending on if the max and second max is the same frequency the program finds the max and min values to find the maxmimum difference
      * Solves the CCC '12 S3 - Absolutely Acidic (https://dmoj.ca/problem/ccc12s3)
@@ -22,7 +22,7 @@ public class AbsolutelyAcidic {
         int maxFrequency = 0;//used to store the max frequency
         int secondMaxFrequency = 0;//used to store the seocndmaximum frequency if there is one
         int maxFrequencyIndex = 0;//used to store the index of the maxfrequency to avoid second counting the max frequency for the second max frequency
-        int secondMaxFrequencyIndex = 0;
+
 
         //for test cases
 //        int[] test1 = {823, 412, 219, 532, 712, 412, 532, 712, 219, 823, 219, 847, 219, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712, 219, 823, 412, 532, 712};
@@ -50,7 +50,6 @@ public class AbsolutelyAcidic {
         for(int i = 0; i<inputarray.length;i++){
             if(inputarray[i]>secondMaxFrequency&&inputarray[i]<=maxFrequency&&i!=maxFrequencyIndex){
                 secondMaxFrequency = inputarray[i];
-                secondMaxFrequencyIndex = i;
             }
         }
 
